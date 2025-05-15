@@ -1,85 +1,89 @@
 /* Reset some default styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/* Body styling */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
-    padding: 20px;
+  background: #121212;
+  color: #eee;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 20px;
 }
 
-/* Header styling */
-header {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    text-align: center;
+/* Logo styling */
+.logo {
+  margin-bottom: 40px;
+  width: 300px;
+  height: auto;
+  filter: drop-shadow(0 0 5px #00b894);
 }
 
-header nav ul {
-    list-style: none;
-    padding: 0;
+/* Search container */
+.search-container {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-header nav ul li {
-    display: inline;
-    margin: 0 15px;
+/* Search input */
+input[type="text"] {
+  flex-grow: 1;
+  padding: 15px 20px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 40px;
+  outline: none;
+  background: #222;
+  color: #eee;
+  transition: background 0.3s ease;
 }
 
-header nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
+input[type="text"]:focus {
+  background: #333;
 }
 
-/* Section styling */
-section {
-    padding: 20px;
-    margin: 20px 0;
-    background-color: white;
-    border-radius: 8px;
+/* Search button */
+button {
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  background: linear-gradient(90deg, #00b894, #0984e3);
+  border: none;
+  border-radius: 40px;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(9, 132, 227, 0.5);
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
-h2 {
-    color: #444;
+button:hover {
+  background: linear-gradient(90deg, #0984e3, #00b894);
+  transform: scale(1.05);
 }
 
-a {
-    color: #333;
-    text-decoration: none;
+/* Footer or extra text */
+.footer-text {
+  margin-top: 50px;
+  font-size: 0.9rem;
+  color: #666;
+  user-select: none;
 }
 
-a:hover {
-    text-decoration: underline;
-}
-
-/* Button styling */
-.download-btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #28a745;
-    color: white;
-    font-size: 16px;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.download-btn:hover {
-    background-color: #218838;
-}
-
-/* Footer styling */
-footer {
-    text-align: center;
-    background-color: #333;
-    color: white;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .search-container {
+    flex-direction: column;
+  }
+  button {
     width: 100%;
+  }
 }
